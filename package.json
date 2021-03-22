@@ -21,6 +21,7 @@
   "dependencies": {
     "fs-extra": "^9.1.0",
     "jsonschema": "^1.4.0",
+    "nodepub": "^3.0.1",
     "yargs": "^16.2.0"
   }
 }
