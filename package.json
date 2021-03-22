@@ -1,0 +1,17 @@
+{
+  "name": "epub-maker",
+  "version": "1.0.0",
+  "description": "creates epub files from images with some extra features",
+  "main": "index.js",
+  "author": "Master Kenth",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "7.12.1",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "nodemon": "^2.0.7"
+  }
+}
