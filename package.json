@@ -1,5 +1,5 @@
 {
-  "name": "epub-maker",
+  "name": "manga-epub-maker",
   "version": "1.0.0",
   "description": "creates epub files from images with some extra features",
   "main": "index.js",
