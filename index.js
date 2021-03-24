@@ -5,6 +5,7 @@ import readline from 'readline'
 import path from 'path'
 import { Validator } from 'jsonschema'
 import nodepub from 'nodepub'
+import jimp from 'jimp'
 
 const rChapterNo = /^.*?(\d+\.?\d*).*$/
 const tmpDirName = '_epubtmp'
@@ -197,6 +198,19 @@ const _run = async () => {
         (f, i) => fs.copyFile(f.orig, f.tmp)
       )))
   )
+
+  console.log('processing')
+  await Promise.all(fullOutputData.map(vol => Promise.all(vol.files.map(f =>
+    /** rotate landscape images */
+    jimp.read(f.tmp)
+      .then(image =>
+        image.bitmap.width > image.bitmap.height
+          ? image
+              .rotate(90)
+              .writeAsync(f.tmp)
+              .then(() => console.log(`rotated ${f.tmp}`))
+          : Promise.resolve())
+  ))))
 
   console.log('creating epub')
   await Promise.all(fullOutputData.map(async (vol, i) => {
