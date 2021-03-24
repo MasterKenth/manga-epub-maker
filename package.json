@@ -1,7 +1,7 @@
 {
   "name": "manga-epub-maker",
   "version": "1.0.0",
-  "description": "ePUB maker written in NodeJS tailored for manga files",
+  "description": "ePub maker written in NodeJS tailored for manga files",
   "main": "index.js",
   "author": "Master Kenth",
   "license": "MIT",
