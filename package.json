@@ -8,6 +8,7 @@
   "type": "module",
   "devDependencies": {
     "@types/fs-extra": "^9.0.8",
+    "@types/jimp": "^0.2.28",
     "@types/jsonschema": "^1.1.1",
     "@types/node": "^14.14.35",
     "@types/yargs": "^16.0.0",
@@ -20,6 +21,7 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
+    "jimp": "^0.16.1",
     "jsonschema": "^1.4.0",
     "nodepub": "^3.0.1",
     "yargs": "^16.2.0"
