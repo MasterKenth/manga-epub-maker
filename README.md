@@ -5,11 +5,12 @@ ePub maker written in NodeJS tailored for manga files.
 This is a helper tool useful for creating Calibre-friendly ePub files from organized 
 image folders such as those downloaded with [Hakuneko](https://hakuneko.download/).
 
-The image folders are expected to be ordered by chapter (`<root>/<chapter n>/<image>`). 
-The Chapter and image number are determined from the path/file name.
+The image folders are expected to be ordered by chapter (`<root>/<chapter n>/<image>`).
 
-Chapter number is determined by this regex: `/^.*?(\d+\.?\d*).*$/`.
-Image number is determined by simply parsing the filename (so `001.jpg` etc.).
+The chapter and image number are determined from the path/file name:
+
+* Chapter number is determined by this regex: `/^.*?(\d+\.?\d*).*$/`.
+* Image number is determined by simply parsing the filename (so `001.jpg` etc.).
 
 ## Usage
 
