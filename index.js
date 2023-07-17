@@ -228,7 +228,7 @@ const _run = async () => {
     const epub = nodepub.document(epubMeta)
     epub.addCSS('body { text-align: center; margin: 0; padding: 0; width: 100%; height: 100%; } img { object-fit: contain; margin: 0; padding: 0; width: 100%; height: 100%; }')
 
-    Object.keys(vol.chapters).forEach(chkey =>
+    Object.keys(vol.chapters).sort().forEach(chkey =>
       epub.addSection(
         `Chapter #${chkey}`,
         vol.chapters[chkey].map(f => `<img src="../images/${path.basename(f.tmp)}" alt="" />`).join('')
